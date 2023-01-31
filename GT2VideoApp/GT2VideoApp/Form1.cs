@@ -1,10 +1,20 @@
 namespace GT2VideoApp
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
+        }
+
+        private void button_filescript_Click(object sender, EventArgs e)
+        {
+            openFileExcuted.ShowDialog();
+        }
+
+        private void openFileExcuted_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            textBox_filescript.Text = openFileExcuted.FileName;
         }
     }
 }
