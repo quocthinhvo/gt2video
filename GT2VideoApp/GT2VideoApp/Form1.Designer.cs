@@ -52,7 +52,8 @@
             // 
             // openFileGT
             // 
-            this.openFileGT.FileName = "openFileDialog1";
+            this.openFileGT.FileName = "gt.txt";
+            this.openFileGT.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileGT_FileOk);
             // 
             // groupBox1
             // 
@@ -83,6 +84,7 @@
             this.button_videofolder.TabIndex = 8;
             this.button_videofolder.Text = "Browser";
             this.button_videofolder.UseVisualStyleBackColor = true;
+            this.button_videofolder.Click += new System.EventHandler(this.button_videofolder_Click);
             // 
             // label_videofolder
             // 
@@ -110,6 +112,7 @@
             this.button_gtfile.TabIndex = 5;
             this.button_gtfile.Text = "Browser";
             this.button_gtfile.UseVisualStyleBackColor = true;
+            this.button_gtfile.Click += new System.EventHandler(this.button_gtfile_Click);
             // 
             // label2
             // 
