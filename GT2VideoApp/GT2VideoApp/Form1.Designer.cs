@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox_filescript = new System.Windows.Forms.TextBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +58,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.button_videofolder);
             this.groupBox1.Controls.Add(this.label_videofolder);
             this.groupBox1.Controls.Add(this.textBox_videofolder);
@@ -70,14 +72,13 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(598, 123);
+            this.groupBox1.Size = new System.Drawing.Size(598, 157);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Config";
             // 
             // button_videofolder
             // 
-            this.button_videofolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button_videofolder.Location = new System.Drawing.Point(511, 82);
             this.button_videofolder.Name = "button_videofolder";
             this.button_videofolder.Size = new System.Drawing.Size(75, 28);
@@ -105,7 +106,6 @@
             // 
             // button_gtfile
             // 
-            this.button_gtfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button_gtfile.Location = new System.Drawing.Point(511, 51);
             this.button_gtfile.Name = "button_gtfile";
             this.button_gtfile.Size = new System.Drawing.Size(75, 28);
@@ -133,7 +133,6 @@
             // 
             // button_filescript
             // 
-            this.button_filescript.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.button_filescript.Location = new System.Drawing.Point(511, 20);
             this.button_filescript.Name = "button_filescript";
             this.button_filescript.Size = new System.Drawing.Size(75, 28);
@@ -162,17 +161,26 @@
             // listView1
             // 
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.Location = new System.Drawing.Point(0, 123);
+            this.listView1.Location = new System.Drawing.Point(0, 157);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(598, 284);
+            this.listView1.Size = new System.Drawing.Size(598, 306);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(511, 116);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 35);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Load";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 407);
+            this.ClientSize = new System.Drawing.Size(598, 463);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -200,5 +208,6 @@
         private Button button_videofolder;
         private Label label_videofolder;
         private TextBox textBox_videofolder;
+        private Button button1;
     }
 }
