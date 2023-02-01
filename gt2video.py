@@ -9,16 +9,15 @@ from pathlib import Path
 # Read agrv
 path_video = sys.argv[2]
 path_gt = sys.argv[1]
-id_video = path_video
+id_video = str(int(Path(path_video).stem))
 # Read gt.txt file and collect true id video
 f = open(path_gt, "r")
 lists_box = []
     
 
 for line in f:
-    tmp_line = f.readline()
-    if (tmp_line.split(",")[0] == str(int(Path(path_video).stem))):
-        lists_box.append(tmp_line.split(","))
+    if (line.split(",")[0] == id_video):
+        lists_box.append(line.split(","))
 
 cap = cv2.VideoCapture(path_video)
   
@@ -38,7 +37,7 @@ print(len(lists_box))
 while(True):
     ret, frame = cap.read()
     if(ret):  
-        print(frame_counter)   
+        # print(frame_counter)   
         for line in lists_box:
             if (line[1] == frame_counter):
                 # print(line)
