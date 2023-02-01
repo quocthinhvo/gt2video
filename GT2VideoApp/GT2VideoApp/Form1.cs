@@ -41,11 +41,10 @@ namespace GT2VideoApp
 
         private void button1_Click(object sender, EventArgs e)
         {
+            listView1.Items.Clear();
             if (textBox_videofolder.Text != "")
             {
-
                 String[] files = Directory.GetFiles(textBox_videofolder.Text);
-
                 for (int i = 0; i < files.Length; i++)
                 {
                     FileInfo file = new FileInfo(files[i]);
@@ -56,8 +55,9 @@ namespace GT2VideoApp
             } 
             else
             {
-                MessageBox.Show("An occured error", "Please choose videos path", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please choose videos path", "An error occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            listView1.Refresh();
         }
 
         private void FormMain_Load(object sender, EventArgs e)
