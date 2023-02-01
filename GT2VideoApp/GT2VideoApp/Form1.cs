@@ -93,6 +93,12 @@ namespace GT2VideoApp
                 return;
             }
 
+            if (textBox_gtfile.Text == "")
+            {
+                MessageBox.Show("Please choose GT file", "An error occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string command = textBox_filescript.Text + " " + textBox_gtfile.Text +" " + listView1.SelectedItems[0].Text;
             Process p = new Process();
             p.StartInfo.UseShellExecute = false;
