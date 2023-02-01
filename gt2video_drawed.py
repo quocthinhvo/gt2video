@@ -26,7 +26,7 @@ for file in os.listdir(path_videos):
     fps_value = int(cap.get(cv2.CAP_PROP_FPS))
     frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
     duration = frame_count/fps_value
-    output = cv2.VideoWriter(path_videos + '\\output\\' + file, cv2.VideoWriter_fourcc(*'MP4V'), fps_value, (1920, 1080))
+    output = cv2.VideoWriter(path_videos + '\\output\\' + file, cv2.VideoWriter_fourcc(*'h264'), fps_value, (1920, 1080))
 
 
     for line in lists_box:
