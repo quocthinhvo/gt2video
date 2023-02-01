@@ -72,7 +72,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(677, 157);
+            this.groupBox1.Size = new System.Drawing.Size(715, 157);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Config";
@@ -81,9 +81,9 @@
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button1.Location = new System.Drawing.Point(585, 116);
+            this.button1.Location = new System.Drawing.Point(623, 116);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(74, 35);
+            this.button1.Size = new System.Drawing.Size(86, 35);
             this.button1.TabIndex = 9;
             this.button1.Text = "Load";
             this.button1.UseVisualStyleBackColor = true;
@@ -92,9 +92,9 @@
             // button_videofolder
             // 
             this.button_videofolder.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_videofolder.Location = new System.Drawing.Point(585, 82);
+            this.button_videofolder.Location = new System.Drawing.Point(623, 82);
             this.button_videofolder.Name = "button_videofolder";
-            this.button_videofolder.Size = new System.Drawing.Size(74, 28);
+            this.button_videofolder.Size = new System.Drawing.Size(86, 28);
             this.button_videofolder.TabIndex = 8;
             this.button_videofolder.Text = "Browser";
             this.button_videofolder.UseVisualStyleBackColor = true;
@@ -116,15 +116,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_videofolder.Location = new System.Drawing.Point(101, 83);
             this.textBox_videofolder.Name = "textBox_videofolder";
-            this.textBox_videofolder.Size = new System.Drawing.Size(477, 25);
+            this.textBox_videofolder.Size = new System.Drawing.Size(515, 25);
             this.textBox_videofolder.TabIndex = 6;
             // 
             // button_gtfile
             // 
             this.button_gtfile.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_gtfile.Location = new System.Drawing.Point(585, 51);
+            this.button_gtfile.Location = new System.Drawing.Point(623, 51);
             this.button_gtfile.Name = "button_gtfile";
-            this.button_gtfile.Size = new System.Drawing.Size(74, 28);
+            this.button_gtfile.Size = new System.Drawing.Size(86, 28);
             this.button_gtfile.TabIndex = 5;
             this.button_gtfile.Text = "Browser";
             this.button_gtfile.UseVisualStyleBackColor = true;
@@ -146,15 +146,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_gtfile.Location = new System.Drawing.Point(101, 52);
             this.textBox_gtfile.Name = "textBox_gtfile";
-            this.textBox_gtfile.Size = new System.Drawing.Size(477, 25);
+            this.textBox_gtfile.Size = new System.Drawing.Size(515, 25);
             this.textBox_gtfile.TabIndex = 3;
             // 
             // button_filescript
             // 
             this.button_filescript.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.button_filescript.Location = new System.Drawing.Point(585, 20);
+            this.button_filescript.Location = new System.Drawing.Point(623, 20);
             this.button_filescript.Name = "button_filescript";
-            this.button_filescript.Size = new System.Drawing.Size(74, 28);
+            this.button_filescript.Size = new System.Drawing.Size(86, 28);
             this.button_filescript.TabIndex = 2;
             this.button_filescript.Text = "Browser";
             this.button_filescript.UseVisualStyleBackColor = true;
@@ -176,7 +176,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox_filescript.Location = new System.Drawing.Point(101, 21);
             this.textBox_filescript.Name = "textBox_filescript";
-            this.textBox_filescript.Size = new System.Drawing.Size(477, 25);
+            this.textBox_filescript.Size = new System.Drawing.Size(515, 25);
             this.textBox_filescript.TabIndex = 0;
             // 
             // listView1
@@ -190,7 +190,7 @@
             this.listView1.Location = new System.Drawing.Point(0, 157);
             this.listView1.MultiSelect = false;
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(677, 306);
+            this.listView1.Size = new System.Drawing.Size(715, 306);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -201,7 +201,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(677, 463);
+            this.ClientSize = new System.Drawing.Size(715, 463);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "FormMain";
