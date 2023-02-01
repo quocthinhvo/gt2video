@@ -106,8 +106,9 @@ namespace GT2VideoApp
             p.StartInfo.FileName = "python.exe";
             p.StartInfo.Arguments = command;
             p.Start();
+            string output = p.StandardOutput.ReadToEnd();
             p.WaitForExit();
-
+            MessageBox.Show(output);
         }
     }
 }
