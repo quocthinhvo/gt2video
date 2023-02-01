@@ -20,6 +20,10 @@ for line in f:
         lists_box.append(line.split(","))
 
 cap = cv2.VideoCapture(path_video)
+fps_value = int(cap.get(cv2.CAP_PROP_FPS))
+frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+duration = frame_count/fps_value
+
   
 output = cv2.VideoWriter(
     "output.avi", cv2.VideoWriter_fourcc(*'MPEG'), 
@@ -68,7 +72,7 @@ while(True):
             break
     else:
         break
-    time.sleep(0.05)
+    time.sleep(1/(frame_count/duration))
     frame_counter += 1
 
 cv2.destroyAllWindows()
