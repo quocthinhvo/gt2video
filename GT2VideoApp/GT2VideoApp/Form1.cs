@@ -80,6 +80,19 @@ namespace GT2VideoApp
 
         private void listView1_ItemActivate(object sender, EventArgs e)
         {
+            if (textBox_filescript.Text == "")
+            {
+                MessageBox.Show("Please choose script", "An error occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            FileInfo fi = new FileInfo(textBox_filescript.Text);
+            string extn = fi.Extension;
+            if (extn != ".py")
+            {
+                MessageBox.Show("Please choose true python script (.py)", "An error occurred", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string command = textBox_filescript.Text + " " + textBox_gtfile.Text +" " + listView1.SelectedItems[0].Text;
             Process p = new Process();
             p.StartInfo.UseShellExecute = false;
