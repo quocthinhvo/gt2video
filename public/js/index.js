@@ -26,3 +26,19 @@ function nex(){
     document.getElementById("video_player").play()
     document.getElementById("filename").innerText = 'videos/' + glo[i]
 }
+
+document.onkeydown = checkKey;
+
+function checkKey(e) {
+
+    e = e || window.event;
+
+    if (e.keyCode == '37') {
+       // left arrow
+       pev()
+    }
+    else if (e.keyCode == '39') {
+       // right arrow
+       nex()
+    }
+}
