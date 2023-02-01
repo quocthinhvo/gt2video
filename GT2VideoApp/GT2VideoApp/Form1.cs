@@ -80,11 +80,11 @@ namespace GT2VideoApp
 
         private void listView1_ItemActivate(object sender, EventArgs e)
         {
-            string command = "/C python " +  textBox_filescript.Text + " " + textBox_gtfile.Text +" " + listView1.SelectedItems[0].Text;
+            string command = textBox_filescript.Text + " " + textBox_gtfile.Text +" " + listView1.SelectedItems[0].Text;
             Process p = new Process();
             p.StartInfo.UseShellExecute = false;
             p.StartInfo.RedirectStandardOutput = true;
-            p.StartInfo.FileName = "cmd.exe";
+            p.StartInfo.FileName = "python.exe";
             p.StartInfo.Arguments = command;
             p.Start();
             p.WaitForExit();
