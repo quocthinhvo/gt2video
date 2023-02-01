@@ -41,7 +41,7 @@ while(True):
             if (line[1] == frame_counter):
                 print(line)
                 tmp_frame = cv2.rectangle(frame, (line[3], line[4]), (line[3] + line[5], line[4] + line[6]),(0, 255, 0), 1)  
-                cv2.putText(tmp_frame, line[2] + " - class: " + line[7], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
         cv2.imshow(path_video, frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
