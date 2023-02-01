@@ -204,7 +204,6 @@
             this.ClientSize = new System.Drawing.Size(677, 463);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.groupBox1);
-            this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Text = "GT2Video";
             this.Load += new System.EventHandler(this.FormMain_Load);
