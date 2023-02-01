@@ -16,8 +16,9 @@ lists_box = []
     
 
 for line in f:
-    if (f.readline().split(",")[0] == str(int(Path(path_video).stem))):
-        lists_box.append(f.readline().split(","))
+    tmp_line = f.readline()
+    if (tmp_line.split(",")[0] == str(int(Path(path_video).stem))):
+        lists_box.append(tmp_line.split(","))
 
 cap = cv2.VideoCapture(path_video)
   
@@ -42,6 +43,21 @@ while(True):
                 print(line)
                 tmp_frame = cv2.rectangle(frame, (line[3], line[4]), (line[3] + line[5], line[4] + line[6]),(0, 255, 0), 1)  
                 cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                # match line[7][0:1]:
+                #     case '1':
+                #         cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                #     case '2':
+                #         cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                #     case '3':
+                #         cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                #     case '4':
+                #         cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                #     case '5':
+                #         cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                #     case '6':
+                #         cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
+                #     case '7':
+                #         cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36,255,12), 2)
         cv2.imshow(path_video, frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

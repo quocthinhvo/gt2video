@@ -19,8 +19,9 @@ for file in os.listdir(path_videos):
         
 
     for line in f:
-        if (f.readline().split(",")[0] == str(int(Path(path_video).stem))):
-            lists_box.append(f.readline().split(","))
+        tmp_line = f.readline()
+        if (tmp_line.split(",")[0] == str(int(Path(path_video).stem))):
+            lists_box.append(tmp_line.split(","))
 
     cap = cv2.VideoCapture(path_video)
     output = cv2.VideoWriter(path_videos + '\\output\\' + file, cv2.VideoWriter_fourcc(*'MP4V'), 20, (1920, 1080))
