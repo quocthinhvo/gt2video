@@ -23,7 +23,10 @@ for file in os.listdir(path_videos):
             lists_box.append(line.split(","))
 
     cap = cv2.VideoCapture(path_video)
-    output = cv2.VideoWriter(path_videos + '\\output\\' + file, cv2.VideoWriter_fourcc(*'MP4V'), 20, (1920, 1080))
+    fps_value = int(cap.get(cv2.CAP_PROP_FPS))
+    frame_count = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
+    duration = frame_count/fps_value
+    output = cv2.VideoWriter(path_videos + '\\output\\' + file, cv2.VideoWriter_fourcc(*'MP4V'), fps_value, (1920, 1080))
 
 
     for line in lists_box:
@@ -65,11 +68,9 @@ for file in os.listdir(path_videos):
                             tmp_frame = cv2.rectangle(frame, (line[3], line[4]), (line[3] + line[5], line[4] + line[6]),(252, 231, 3), 1)  
                             cv2.putText(tmp_frame, line[2] + " - class: " + line[7][0:1], (line[3], line[4]-10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (252, 231, 3), 2)
         #    cv2.imshow(path_video, frame)
-            output.write(frame)
-            
+            output.write(frame)      
         else:
             break
         frame_counter += 1
-
     output.release()
     cap.release()

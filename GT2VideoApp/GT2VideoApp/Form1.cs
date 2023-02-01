@@ -108,6 +108,7 @@ namespace GT2VideoApp
             p.Start();
             string output = p.StandardOutput.ReadToEnd();
             p.WaitForExit();
+            p.Close();
         }
     }
 }
