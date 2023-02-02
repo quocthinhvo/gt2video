@@ -14,28 +14,28 @@
         <h3 id="filename">Video 001.mp4</h3>
     </nav>
     <div>
-        <table class="table">
-            <tbody>
-              <tr>
-                <td scope="col" style="color:rgb(36,255,12);">1. motorbike</td>
-                <td scope="col" style="color:rgb(3, 186, 252);">2. DHelmet</td>
-                <td scope="col" style="color:rgb(252, 49, 3);">3. DNoHelmet</td>
-                <td scope="col" style="color:rgb(252, 3, 219);">4. P1Helmet</td>
-                <td scope="col" style="color:rgb(252, 252, 3);">5. P1Helmet</td>
-                <td scope="col" style="color:rgb(20, 3, 252);">6. P1NoHelmet</td>
-                <td scope="col" style="color:rgb(3, 231, 252);">7. P2NoHelmet</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
-    <div>
-        <video width="100%" controls id="video_player" style="margin-top: 10px;">
+        <table>
+            <td width="60%">
+                <div>
+                    <video width="100%" controls id="video_player" style="margin-top: 10px;">
     
-        </video>
-    </div>
-    <div style="text-align: center;">
-        <button class="btn btn-primary" onClick = "pev()">Previous</button>
-        <button class="btn btn-primary" onClick="nex()">Next</button>
+                    </video>
+                </div>
+                <div style="text-align: center;">
+                    <button class="btn btn-primary" onClick = "pev()">Previous</button>
+                    <button class="btn btn-primary" onClick="nex()">Next</button>
+                </div>
+            </td>
+            <td>
+                <div style="color:rgb(36,255,12);"> 1. motorbike <br/> bbox of motorcycle </div>
+                <div style="color:rgb(3, 186, 252);"> 2. DHelmet <br/> bbox of the driver wearing a helmet </div>
+                <div style="color:rgb(252, 49, 3);"> 3. DNoHelmet <br/> bbox of the driver wearing a helmet </div>
+                <div style="color:rgb(252, 3, 219);"> 4. P1Helmet <br/> bbox of the passenger 1 wearing a helmet </div>
+                <div style="color:rgb(252, 252, 3);"> 5. P1NoHelmet <br/> bbox of the passenger 1 not wearing a helmet </tr>
+                <div style="color:rgb(20, 3, 252);"> 6. P2Helmet <br/> bbox of the passenger 2 wearing a helmet </div>
+                <div style="color:rgb(3, 231, 252);"> 7. P2NoHelmet <br/> bbox of the passenger 2 not wearing a helmet </div>
+            </td>
+        </table>
     </div>
 </body>
 </html>
