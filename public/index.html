@@ -14,14 +14,28 @@
         <h3 id="filename">Video 001.mp4</h3>
     </nav>
     <div>
-        <button class="btn btn-primary" onClick = "pev()">Previous</button>
-        <button class="btn btn-primary" onClick="nex()">Next</button>
+        <table class="table">
+            <tbody>
+              <tr>
+                <td scope="col">1. motorbike</td>
+                <td scope="col">2. DHelmet</td>
+                <td scope="col">3. DNoHelmet</td>
+                <td scope="col">4. P1Helmet</td>
+                <td scope="col">5. P1NoHelmet</td>
+                <td scope="col">6. P2Helmet</td>
+                <td scope="col">7. P2NoHelmet</td>
+              </tr>
+            </tbody>
+          </table>
     </div>
     <div>
         <video width="100%" controls id="video_player" style="margin-top: 10px;">
     
         </video>
     </div>
-    
+    <div style="text-align: center;">
+        <button class="btn btn-primary" onClick = "pev()">Previous</button>
+        <button class="btn btn-primary" onClick="nex()">Next</button>
+    </div>
 </body>
 </html>

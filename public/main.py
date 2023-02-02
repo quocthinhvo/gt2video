@@ -21,6 +21,7 @@ def read_root():
 
 @app.get("/list_videos")
 def get_list_videos():
-    list_videos = os.listdir('videos/') 
+    list_videos = os.listdir('videos/')
+    list_videos.sort()
     return JSONResponse(list_videos)
 
