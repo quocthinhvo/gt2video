@@ -4,7 +4,7 @@ fetch('/list_videos')
   .then((data) => {
     i = 0
     glo = data
-    document.getElementById("video_player").innerHTML ='<source src="videos/' + data[i]+ '" type="video/mp4"></source>'
+    document.getElementById("video_player").src ='videos/' + glo[i]
     document.getElementById("filename").innerText = 'videos/' + data[i]
   });
 
