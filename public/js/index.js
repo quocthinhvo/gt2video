@@ -5,7 +5,7 @@ fetch('/list_videos')
     i = 0
     glo = data
     document.getElementById("video_player").src ='videos/' + glo[i]
-    document.getElementById("filename").innerText = 'videos/' + data[i]
+    document.getElementById("filename").innerText = 'videos/' + glo[i]
   });
 
 
