@@ -15,12 +15,17 @@
     </nav>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-8" style="text-align: center;">
                 <video width="100%" controls id="video_player" style="margin-top: 10px;"></video>
+                
             </div>
             <div class="col-sm-4">
-                <div class="">
+                <div>
                         <input class="form-control mr-sm-2" placeholder="Video ID here" aria-label="Video ID here">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-secondary" onClick="pev()">Previous</button>
+                            <button type="button" class="btn btn-secondary" onClick="nex()">Next</button>
+                          </div>
                 </div>
                 <table class="table">
                     <thead>
