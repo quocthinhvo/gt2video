@@ -8,10 +8,21 @@ fetch('/list_videos')
     document.getElementById("filename").innerText = 'videos/' + data[i]
   });
 
+function videoSearch(event) {
+    if (event.key == "Enter") {
+    
+      var videoid = document.getElementById("textInput").value 
+      document.getElementById("video_player").src ='videos/' + videoid
+      document.getElementById("filename").innerText = 'videos/' + videoid
+    }
+  
+}
+
 
 function pev(){
     if (i == 0) return;
     i = i - 1
+    
     document.getElementById("video_player").src = 'videos/' + glo[i]
     document.getElementById("video_player").load()
     document.getElementById("video_player").play()
