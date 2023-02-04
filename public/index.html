@@ -10,35 +10,71 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="nav navbar">
-        <h3 id="filename">Video 001.mp4</h3>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" id="filename">Video</a>
     </nav>
-    <div>
-        
+    <div class="container-fluid">
         <div class="row">
             <div class="col-sm-8">
-                <div>
-                    <input type="text" id="textInput" placeholder="Search" onkeypress="videoSearch(event)" class="form-control">
-                </div>
-                <div>
-                    <video width="100%" controls id="video_player" style="margin-top: 10px;"></video>
-                </div>
-                <div style="text-align: center;">
-                    <button class="btn btn-primary" onClick="pev()">Previous</button>
-                    <button class="btn btn-primary" onClick="nex()">Next</button>
-                </div>
+                <video width="100%" controls id="video_player" style="margin-top: 10px;"></video>
             </div>
-            <div class="col-sm-4" style="margin-top: 80px;">
-                    <div style="color:rgb(36,255,12);" class="row"> 1. motorbike <br/> bbox of motorcycle </div>
-                    <div style="color:rgb(3, 186, 252);" class="row"> 2. DHelmet <br/> bbox of the driver wearing a helmet </div>
-                    <div style="color:rgb(252, 49, 3);" class="row"> 3. DNoHelmet <br/> bbox of the driver wearing a helmet </div>
-                    <div style="color:rgb(252, 3, 219);" class="row"> 4. P1Helmet <br/> bbox of the passenger 1 wearing a helmet </div>
-                    <div style="color:rgb(252, 252, 3);" class="row"> 5. P1NoHelmet <br/> bbox of the passenger 1 not wearing a helmet </tr>
-                    <div style="color:rgb(20, 3, 252);" class="row"> 6. P2Helmet <br/> bbox of the passenger 2 wearing a helmet </div>
-                    <div style="color:rgb(3, 231, 252);" class="row"> 7. P2NoHelmet <br/> bbox of the passenger 2 not wearing a helmet </div>
-            </div>
+            <div class="col-sm-4">
+                <div class="">
+                        <input class="form-control mr-sm-2" placeholder="Video ID here" aria-label="Video ID here">
+                </div>
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th style="color:rgb(36,255,12);" scope="row">1</th>
+                        <td>Motorbike</td>
+                        <td>bbox of motorcycle</td>
+                      </tr>
+                      <tr>
+                        <th style="color:rgb(3, 186, 252);" scope="row">2</th>
+                        <td>DHelmet</td>
+                        <td>bbox of the driver wearing a helmet</td>
+                      </tr>
+                      <tr>
+                        <th style="color:rgb(252, 49, 3);" scope="row">3</th>
+                        <td>DNoHelmet</td>
+                        <td>bbox of the driver wearing a helmet</td>
+                      </tr>
+                      <tr>
+                        <th style="color:rgb(252, 3, 219);" scope="row">4</th>
+                        <td>P1Helmet</td>
+                        <td>bbox of the passenger 1 wearing a helmet</td>
+                      </tr>
+                      <tr>
+                        <th style="color:rgb(252, 252, 3);" scope="row">5</th>
+                        <td>P1NoHelmet</td>
+                        <td>bbox of the passenger 1 not wearing a helmet</td>
+                      </tr>
+                      <tr>
+                        <th style="color:rgb(20, 3, 252);" scope="row">6</th>
+                        <td>P2Helmet</td>
+                        <td>bbox of the passenger 2 wearing a helmet</td>
+                      </tr>
+                      <tr>
+                        <th style="color:rgb(3, 231, 252);" scope="row">7</th>
+                        <td>P2NoHelmet</td>
+                        <td>bbox of the passenger 2 not wearing a helmet</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>      
         </div>
     </div>
+    
+    <footer>
+        
+    </footer>
     <script src="js/index.js"></script>
 </body>
 </html>
