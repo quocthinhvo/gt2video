@@ -49,6 +49,8 @@ async def get_stream(websocket: WebSocket, path_video: str, path_gt: str):
             frame_counter = 1
 
         while(True):
+            # if (data == "stop"):
+            #     websocket.close()
             ret, frame = cap.read()
             if(ret):  
                 for line in lists_box:
@@ -80,7 +82,7 @@ async def get_stream(websocket: WebSocket, path_video: str, path_gt: str):
                 await websocket.send_bytes(buffer.tobytes())
             else:
                 break
-            time.sleep(1/(frame_count/duration))
+            # time.sleep(1/(frame_count/duration))
             frame_counter += 1
         cap.release()
     except WebSocketDisconnect:
@@ -90,10 +92,6 @@ async def get_stream(websocket: WebSocket, path_video: str, path_gt: str):
 async def get_stream1(websocket: WebSocket, path_video: str, path_gt: str):
     await websocket.accept()
     try:
-        # path_video = "D:\\Code\\gt2video\\data\\videos\\002.mp4"
-        # path_gt = "D:\\Code\\gt2video\\data\\gt.txt"
-        print(path_gt)
-        print(path_video)
         id_video = str(int(Path(path_video).stem))
         # Read gt.txt file and collect true id video
         f = open(path_gt, "r")
@@ -146,7 +144,7 @@ async def get_stream1(websocket: WebSocket, path_video: str, path_gt: str):
                 await websocket.send_bytes(buffer.tobytes())
             else:
                 break
-            time.sleep(1/(frame_count/duration))
+            # time.sleep(1/(frame_count/duration))
             frame_counter += 1
         cap.release()
     except WebSocketDisconnect:

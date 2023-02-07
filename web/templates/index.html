@@ -29,18 +29,18 @@
                     </div>
                 </div>
                 <div class="col-sm-3">
-                    <div>
-                            <input id="path_video" class="form-control mr-sm-2" placeholder="Video ID" aria-label="Video ID">
+                    <form>
+                            <input id="path_video" type="text" name="path_video" class="form-control mr-sm-2" placeholder="Video ID" aria-label="Video ID">
                             <br> 
-                            <input id="path_gt_0" class="form-control mr-sm-2" placeholder="Bbox file 1" aria-label="Bbox file 1">
+                            <input id="path_gt_0" type="text" name="path_gt_0"  class="form-control mr-sm-2" placeholder="Bbox file 1" aria-label="Bbox file 1">
                             <br>
-                            <input id="path_gt_1" class="form-control mr-sm-2" placeholder="Bbox file 2" aria-label="Bbox file 2">
+                            <input id="path_gt_1" type="text" name="path_gt_1" class="form-control mr-sm-2" placeholder="Bbox file 2" aria-label="Bbox file 2">
                             <br>
                             <div class="btn-group">
-                                <button class="btn btn-primary" onClick="start()">Load</button>
-                                <button class="btn btn-outline-danger" onClick="statusClear = true;">Clear</button>
+                                <button class="btn btn-primary" submit="index.html">Load</button>
+                                <button class="btn btn-outline-danger" onClick="window.location = window.location.href.split('?')[0];">Clear</button>
                             </div>
-                    </div>
+                        </form>
                     <table class="table">
                         <thead>
                           <tr>
