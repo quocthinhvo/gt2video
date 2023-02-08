@@ -4,9 +4,10 @@ services:
   gt2video:
     build: .
     container_name: gt2video_v2
-    command: uvicorn main:app --host 0.0.0.0
+    command: uvicorn main:app --host 0.0.0.0 --workers 4
     volumes:
       - ./:/app
+      - /home/thinhvo/:/resources
     ports:
       - 8008:8000
     restart: unless-stopped
