@@ -1,10 +1,12 @@
 version: '3.8'
 
 services:
-  web:
+  gt2video:
     build: .
+    container_name: gt2video_v2
     command: uvicorn main:app --host 0.0.0.0
     volumes:
-      - .:/app
+      - ./:/app
     ports:
       - 8008:8000
+    restart: unless-stopped
